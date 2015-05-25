@@ -1,0 +1,15 @@
+Source: fubar
+Maintainer: Flip Hess
+Section: misc
+Priority: extra
+Standards-Version: 3.9.4
+Build-Depends: debhelper (>= 7)
+X-Python-Version: >= 2.7
+Homepage: https://github.com/fliphess/fubar
+Vcs-Git: git://github.com/fliphess/fubar.git
+Vcs-Browser: https://github.com/fliphess/fubar
+
+Package: fubar
+Architecture: all
+Description: Provides foo and bar.
+ This package is fubar.

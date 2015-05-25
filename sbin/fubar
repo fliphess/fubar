@@ -1,0 +1,43 @@
+#!/usr/bin/env python
+import argparse
+import os
+import sys
+
+
+def parse_options():
+    parser = argparse.ArgumentParser(description="Fubar - Provides foo and bar")
+    parser.add_argument('-f', '--foo', help='Foo', action="store_true", default=False)
+    parser.add_argument('-b', '--bar', help='Bar', action="store_true", default=False)
+    return parser.parse_args()
+
+
+def cows():
+    return """
+            (__)          (__)          (__)          (__)
+            (uu)          (uu)          (uu)          (uu)
+     /-------\/    /-------\/    /-------\/    /-------\/
+   / |     ||    / |     ||    / |     ||    / |     ||
+  *  ||----||   *  ||----||   *  ||----||   *  ||----||
+     ~~    ~~      ~~    ~~      ~~    ~~      ~~    ~~
+    """
+
+
+def main():
+    args = parse_options()
+    name = os.path.basename(sys.argv[0]) or 'fubar'
+
+    if args.foo and args.bar:
+        return cows()
+
+    elif args.foo or name == 'foo':
+        return 'foo'
+
+    elif args.bar or name == 'bar':
+        return 'bar'
+
+    else:
+        return 'fubar'
+
+
+if __name__ == "__main__":
+    print main()

@@ -1,0 +1,10 @@
+#!/usr/bin/make -f
+%:
+	dh $@ 
+
+
+override_dh_fixperms:
+	chmod 0755 debian/fubar/usr/sbin/fubar
+	ln -s /usr/sbin/fubar debian/fubar/usr/sbin/foo
+	ln -s /usr/sbin/fubar debian/fubar/usr/sbin/bar
+

@@ -1,0 +1,12 @@
+fubar (2) unstable; urgency=medium
+
+  * Make less fubar
+
+ -- Flip Hess <flip@fliphess.com>  Mon, 25 May 2015 19:57:26 +0200
+
+fubar (1) unstable; urgency=low
+
+  * Provide foo and bar 
+
+ -- Flip Hess <flip@fliphess.com>  Mon, 25 May 2015 19:41:49 +0200
+
